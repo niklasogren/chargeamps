@@ -102,7 +102,7 @@ status() {
 action=""
 maxCurrent="16"
 apiKey=""
-while getopts ":a:e:p:i" o; do
+while getopts "a:e:p:i:k:" o; do
     case "${o}" in
         a)
             action="${OPTARG}"
