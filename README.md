@@ -43,8 +43,9 @@ It gives me the trigger possibility.
 
 Install Better Logic Library app in Homey.
 
-Go into its App Settings, and add a few variables according to
-![BLL variables](./homey/flows/bll_vars.png)
+Configure Homey Number Variables for the load balancer, by
+going into More->Variables, and add according to
+![Variables](./homey/flows/vars.png)
 
 * ChargeAt - set your default to 16
 * LoadBalL1 - Current limitation needed for L1 (0)
@@ -52,7 +53,7 @@ Go into its App Settings, and add a few variables according to
 * LoadBalL3 - Current limitation needed for L3 (0)
 * MaxA - When to start load balance (24)
 
-Create the following Logic variables in Homey:
+Also create the following Text variables:
 
 * ca-email - your e-mail address/login to Charge Amps
 * ca-password - your password to Charge Amps
@@ -71,11 +72,14 @@ Create corresponding flows for each script, see example screen shots.
 ![CAchargeAt](./homey/flows/CAchargeAt.png)
 ![CAlogin](./homey/flows/CAlogin.png)
 ![CArefresh](./homey/flows/CArefresh.png)
+![ElAmp1](./homey/flows/ElAmp1.png) (Create three of these, one for each phase)
+![ElRestoreA](./homey/flows/ElRestoreA.png)
+![ElRestoreB](./homey/flows/ElRestoreB.png)
 
 Run the CAlogin script manually, to grab the first token. It will then be
 able to refresh automatically.
 
-Monitor, perhaps with Homey Insights, the value of ChargeAt variable.
+You can monitor, perhaps with Homey Insights, the value of ChargeAt variable.
 
 You can also run the ca-status.js Homescript to grab current status. Use
 the Homey Web app, to run it, and receive the output.
