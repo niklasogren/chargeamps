@@ -72,9 +72,12 @@ Create corresponding flows for each script, see example screen shots.
 ![CAchargeAt](./homey/flows/CAchargeAt.png)
 ![CAlogin](./homey/flows/CAlogin.png)
 ![CArefresh](./homey/flows/CArefresh.png)
-![ElAmp1](./homey/flows/ElAmp1.png) (Create three of these, one for each phase)
 ![ElRestoreA](./homey/flows/ElRestoreA.png)
 ![ElRestoreB](./homey/flows/ElRestoreB.png)
+
+Create three of the following, one for each phase:
+ 
+![ElAmp1](./homey/flows/ElAmp1.png)
 
 Run the CAlogin script manually, to grab the first token. It will then be
 able to refresh automatically.
